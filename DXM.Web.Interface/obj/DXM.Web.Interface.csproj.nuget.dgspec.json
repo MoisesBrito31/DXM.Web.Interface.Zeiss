@@ -1,31 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.Web.Interface\\DXM.Web.Interface.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Web.Interface\\DXM.Web.Interface.csproj": {}
   },
   "projects": {
-    "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.OEE\\DXM.OEE.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.OEE\\DXM.OEE.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj",
         "projectName": "DXM.OEE",
-        "projectPath": "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.OEE\\DXM.OEE.csproj"
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj"
       },
       "frameworks": {
         "net461": {}
       }
     },
-    "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.Store\\DXM.Store.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Store\\DXM.Store.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.Store\\DXM.Store.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Store\\DXM.Store.csproj",
         "projectName": "DXM.Store",
-        "projectPath": "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.Store\\DXM.Store.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Store\\DXM.Store.csproj",
         "frameworks": {
           "net461": {
             "projectReferences": {
-              "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.OEE\\DXM.OEE.csproj": {
-                "projectPath": "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.OEE\\DXM.OEE.csproj"
+              "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj"
               }
             }
           }
@@ -35,14 +35,14 @@
         "net461": {}
       }
     },
-    "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.Web.Interface\\DXM.Web.Interface.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Web.Interface\\DXM.Web.Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.Web.Interface\\DXM.Web.Interface.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Web.Interface\\DXM.Web.Interface.csproj",
         "projectName": "DXM.Web.Interface",
-        "projectPath": "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.Web.Interface\\DXM.Web.Interface.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Web.Interface\\DXM.Web.Interface.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.Web.Interface\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Web.Interface\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,11 +58,11 @@
         "frameworks": {
           "net461": {
             "projectReferences": {
-              "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.OEE\\DXM.OEE.csproj": {
-                "projectPath": "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.OEE\\DXM.OEE.csproj"
+              "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj"
               },
-              "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.Store\\DXM.Store.csproj": {
-                "projectPath": "C:\\DXM100 estudos\\DXM.Web.Interface - zyess\\DXM.Store\\DXM.Store.csproj"
+              "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Store\\DXM.Store.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Store\\DXM.Store.csproj"
               }
             }
           }
