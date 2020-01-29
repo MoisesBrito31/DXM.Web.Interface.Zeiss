@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<configuration>
+  <file_info>
+    <info filename="DXM_OEE.xml" guid="10c448a3-fc39-4dce-a836-48af1e6ee601" software="DXMConfigurationSoftware v4" timestamp="29/01/2020 12:48:29" version="4.2.5.0" os="Win32NT" osversion="Microsoft Windows NT 6.2.9200.0" device="DXM100" solution="None" />
+  </file_info>
+  <local_regs>
+    <reg num="1" name="Falha" tag="L1" />
+    <reg num="2" name="Espera" tag="L1" />
+    <reg num="3" name="Rodando" tag="L1" />
+    <reg num="4" name="Parado" tag="L1" />
+    <reg num="5" name="Falha" tag="L2" />
+    <reg num="6" name="Espera" tag="L2" />
+    <reg num="7" name="Rodando" tag="L2" />
+    <reg num="8" name="Parado" tag="L2" />
+    <reg num="9" name="Falha" tag="L3" />
+    <reg num="10" name="Espera" tag="L3" />
+    <reg num="11" name="Rodando" tag="L3" />
+    <reg num="12" name="Parado" tag="L3" />
+    <reg num="13" name="Falha" tag="L4" />
+    <reg num="14" name="Espera" tag="L4" />
+    <reg num="15" name="Rodando" tag="L4" />
+    <reg num="16" name="Parado" tag="L4" />
+    <reg num="17" name="Falha" tag="L5" />
+    <reg num="18" name="Espera" tag="L5" />
+    <reg num="19" name="Rodando" tag="L5" />
+    <reg num="20" name="Parado" tag="L5" />
+    <reg num="21" name="Falha" tag="L6" />
+    <reg num="22" name="Espera" tag="L6" />
+    <reg num="23" name="Rodando" tag="L6" />
+    <reg num="24" name="Parado" tag="L6" />
+    <reg num="25" name="Falha" tag="L7" />
+    <reg num="26" name="Espera" tag="L7" />
+    <reg num="27" name="Rodando" tag="L7" />
+    <reg num="28" name="Parado" tag="L7" />
+    <reg num="29" name="Falha" tag="L8" />
+    <reg num="30" name="Espera" tag="L8" />
+    <reg num="31" name="Rodando" tag="L8" />
+    <reg num="32" name="Parado" tag="L8" />
+    <reg num="33" name="Falha" tag="L9" />
+    <reg num="34" name="Espera" tag="L9" />
+    <reg num="35" name="Rodando" tag="L9" />
+    <reg num="36" name="Parado" tag="L9" />
+    <reg num="37" name="Falha" tag="L10" />
+    <reg num="38" name="Espera" tag="L10" />
+    <reg num="39" name="Rodando" tag="L10" />
+    <reg num="40" name="Parado" tag="L10" />
+    <reg num="41" name="Falha" tag="L11" />
+    <reg num="42" name="Espera" tag="L11" />
+    <reg num="43" name="Rodando" tag="L11" />
+    <reg num="44" name="Parado" tag="L11" />
+    <reg num="45" name="Falha" tag="L13" />
+    <reg num="46" name="Espera" tag="L13" />
+    <reg num="47" name="Rodando" tag="L13" />
+    <reg num="48" name="Parado" tag="L13" />
+    <reg num="49" name="Falha" tag="L14" />
+    <reg num="50" name="Espera" tag="L14" />
+    <reg num="51" name="Rodando" tag="L14" />
+    <reg num="52" name="Parado" tag="L14" />
+    <reg num="53" name="Falha" tag="L15" />
+    <reg num="54" name="Espera" tag="L15" />
+    <reg num="55" name="Rodando" tag="L15" />
+    <reg num="56" name="Parado" tag="L15" />
+    <reg num="57" name="Falha" tag="L16" />
+    <reg num="58" name="Espera" tag="L16" />
+    <reg num="59" name="Rodando" tag="L16" />
+    <reg num="60" name="Parado" tag="L16" />
+  </local_regs>
+  <cascade />
+  <constant />
+  <calculate />
+  <thresholds />
+  <trend />
+  <rtu_read>
+    <rule count="3" mask="0" name="N12" offset="0" poll="2" remfmt="int" remreg="193" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="401" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N13" offset="0" poll="2" remfmt="int" remreg="209" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="405" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N14" offset="0" poll="2" remfmt="int" remreg="225" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="409" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N15" offset="0" poll="2" remfmt="int" remreg="241" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="413" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N11" offset="0" poll="2" remfmt="int" remreg="177" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="417" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N17" offset="0" poll="2" remfmt="int" remreg="273" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="421" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N10" offset="0" poll="2" remfmt="int" remreg="161" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="425" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N9" offset="0" poll="2" remfmt="int" remreg="145" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="429" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N7" offset="0" poll="2" remfmt="int" remreg="113" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="433" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N5" offset="0" poll="2" remfmt="int" remreg="81" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="437" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N4" offset="0" poll="2" remfmt="int" remreg="65" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="441" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N8" offset="0" poll="2" remfmt="int" remreg="129" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="445" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N3" offset="0" poll="2" remfmt="int" remreg="49" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="449" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N6" offset="0" poll="2" remfmt="int" remreg="97" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="453" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N1" offset="0" poll="2" remfmt="int" remreg="17" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="457" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N2" offset="0" poll="2" remfmt="int" remreg="33" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="461" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N16" offset="0" poll="2" remfmt="int" remreg="257" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="465" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N18" offset="0" poll="2" remfmt="int" remreg="289" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="469" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N19" offset="0" poll="2" remfmt="int" remreg="305" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="473" maxfail="0" default="0" />
+    <rule count="3" mask="0" name="N20" offset="0" poll="2" remfmt="int" remreg="321" remtype="hold_reg" scale="0" swapped="0" unit="1" localreg="477" maxfail="0" default="0" />
+  </rtu_read>
+  <rtu_write />
+  <sched_holidays />
+  <sched_commands />
+  <sched_events />
+  <astro_clock>
+    <set dst="0" lat="0" lon="0" zone="-3" />
+  </astro_clock>
+  <gps>
+    <unit addr="0" enabled="0" flags="0" lograte="00:00:00" poll="00:00:00" />
+  </gps>
+  <master_mode>
+    <mode opt="1" state="0" />
+  </master_mode>
+  <rtu_device>
+    <dev baud="19200" commtype="485" data="8" parity="0" stop="1" rate="50" thisUnit="0" timeout="5.000" />
+  </rtu_device>
+  <rtu_server>
+    <dev baud="19200" commtype="485" data="8" parity="0" stop="1" timeout="0" />
+  </rtu_server>
+  <scripts>
+    <script enabled="1" path="OEE.sb" baud="19200" data="8" parity="0" stop="1" />
+  </scripts>
+  <timekeepers>
+    <timekeeper name="external" interval="0" enabled="1" address="0.0.0.0" />
+    <timekeeper name="internal" interval="0" enabled="0" address="0.0.0.0" />
+    <timekeeper name="network" interval="0" enabled="0" address="0.0.0.0" />
+  </timekeepers>
+  <system_types />
+  <log_files>
+    <fileinfo>
+      <message></message>
+      <log dir="1" enab="0" end="00:00:00" name="EventLog.txt" new="0" rate="00:00:00" reg="0" tod="1" full="0" size="102400" email="" subject="" />
+    </fileinfo>
+    <fileinfo>
+      <message></message>
+      <log dir="1" enab="0" end="00:00:00" name="LogFile1.txt" new="0" rate="00:00:00" reg="0" tod="5" full="0" size="102400" email="" subject="" />
+    </fileinfo>
+    <fileinfo>
+      <message></message>
+      <log dir="1" enab="0" end="00:00:00" name="LogFile2.txt" new="0" rate="00:00:00" reg="0" tod="5" full="0" size="102400" email="" subject="" />
+    </fileinfo>
+    <fileinfo>
+      <message></message>
+      <log dir="1" enab="0" end="00:00:00" name="LogFile3.txt" new="0" rate="00:00:00" reg="0" tod="5" full="0" size="102400" email="" subject="" />
+    </fileinfo>
+    <fileinfo>
+      <message></message>
+      <log dir="1" enab="1" end="00:00:00" name="HttpLog.txt" new="0" rate="00:00:00" reg="0" tod="1" full="1" size="0" email="" subject="" />
+    </fileinfo>
+  </log_files>
+  <device_sync>
+    <device sync_rollover="100000000" />
+  </device_sync>
+  <email_server>
+    <server auth="" domain="" pop3="" pop3domain="" pop3user="" port="25" smtp="" sysrep="0" user="" pwd="" useauth="0" pass="" />
+  </email_server>
+  <email_recipient>
+    <mailto>
+      <recipient addtext="0" autogen="0" name="" subject="" />
+      <message></message>
+    </mailto>
+    <mailto>
+      <recipient addtext="0" autogen="0" name="" subject="" />
+      <message></message>
+    </mailto>
+    <mailto>
+      <recipient addtext="0" autogen="0" name="" subject="" />
+      <message></message>
+    </mailto>
+    <mailto>
+      <recipient addtext="0" autogen="0" name="" subject="" />
+      <message></message>
+    </mailto>
+    <mailto>
+      <recipient addtext="0" autogen="0" name="" subject="" />
+      <message></message>
+    </mailto>
+    <mailto>
+      <recipient addtext="0" autogen="0" name="" subject="" />
+      <message></message>
+    </mailto>
+    <mailto>
+      <recipient addtext="0" autogen="0" name="" subject="" />
+      <message></message>
+    </mailto>
+    <mailto>
+      <recipient addtext="0" autogen="0" name="" subject="" />
+      <message></message>
+    </mailto>
+    <mailto>
+      <recipient addtext="0" autogen="0" name="" subject="" />
+      <message></message>
+    </mailto>
+    <mailto>
+      <recipient addtext="0" autogen="0" name="" subject="" />
+      <message></message>
+    </mailto>
+  </email_recipient>
+  <sms>
+    <sms_recipient>
+      <recipient name="SMS Recipient 1" phone="" />
+      <message></message>
+    </sms_recipient>
+    <sms_recipient>
+      <recipient name="SMS Recipient 2" phone="" />
+      <message></message>
+    </sms_recipient>
+    <sms_recipient>
+      <recipient name="SMS Recipient 3" phone="" />
+      <message></message>
+    </sms_recipient>
+    <sms_recipient>
+      <recipient name="SMS Recipient 4" phone="" />
+      <message></message>
+    </sms_recipient>
+    <sms_recipient>
+      <recipient name="SMS Recipient 5" phone="" />
+      <message></message>
+    </sms_recipient>
+    <sms_recipient>
+      <recipient name="SMS Recipient 6" phone="" />
+      <message></message>
+    </sms_recipient>
+    <sms_recipient>
+      <recipient name="SMS Recipient 7" phone="" />
+      <message></message>
+    </sms_recipient>
+    <sms_recipient>
+      <recipient name="SMS Recipient 8" phone="" />
+      <message></message>
+    </sms_recipient>
+    <sms_recipient>
+      <recipient name="SMS Recipient 9" phone="" />
+      <message></message>
+    </sms_recipient>
+    <sms_recipient>
+      <recipient name="SMS Recipient 10" phone="" />
+      <message></message>
+    </sms_recipient>
+  </sms>
+  <server_params>
+    <server apn="IP" apnpass="" cellenab="8" cellfw="0.0.0.0" cellfwmask="255.255.255.0" defaddr="192.168.0.1" defgtwy="0.0.0.0" defmask="255.255.255.0" dhcp="0" sms="0" />
+    <maint csqbak="0" cexch="0" csqret="5" csrvwd="0" linkdel="10000" linkret="8" csflags="0" csrvre="0" ckeep="0" linkmax="30000" />
+  </server_params>
+  <http_push>
+    <dns address="0.0.0.0" />
+    <dns address="0.0.0.0" />
+    <push enabled="1" flags="4096" id="00000000-0000-0000-0000-000000000000" interval="00:00:00" port="80" debug="0" vendor="0" host="push.bannercds.com" page="/push.aspx" />
+  </http_push>
+  <fwall />
+</configuration>

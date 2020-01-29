@@ -1,0 +1,133 @@
+﻿@model DXM.OEE.OEE;
+
+@{
+    ViewData["Title"] = "Planta Baixa";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+    canvas {
+        border: 1px solid #d3d3d3;
+        background-color: #f1f1f1;
+        margin:auto;
+        text-align:center;
+    }
+</style>
+
+<div class="card-title mt-5 mb-5">
+    <div class="row">
+        <div class="col text-left">
+            <h2>Fábrica Planta Baixa</h2>
+        </div>
+    </div>
+</div>
+
+
+
+<hr>
+<div class="container-fluid row m-auto">
+    <canvas id="view"></canvas>
+</div>
+
+<script type="text/javascript">
+    var imgFundo = new Image();
+    var imgVermelho = new Image();
+    var imgLaranja = new Image();
+    var imgVerde = new Image();
+    var imgCinza = new Image();
+
+    imgFundo.src = "/images/fundo.jpg";
+    imgVermelho.src = "/images/vermelho.png";
+    imgLaranja.src = "/images/laranja.png";
+    imgVerde.src = "/images/verde.png"; 
+    imgCinza.src = "/images/cinza.png";     
+    
+
+    var gameArea = {
+        canvas: document.getElementById("view"),
+        ctx: document.getElementById("view").getContext("2d"),      
+        Start: function () {
+            this.canvas.width = 1200;
+            this.canvas.height = 800;
+            this.context = this.ctx;  
+            this.interval = setInterval(upDate,20)
+        },
+
+        clear: function () {
+            this.ctx.clearRect(0,0,this.width,this.height)
+        }
+    }
+
+    function sprinte(w, h, x, y, image) {
+        this.width = w;
+        this.height = h;
+        this.x = x;
+        this.y = y;
+        this.image = image;
+        this.upDate = function () {
+            gameArea.ctx.drawImage(this.image,this.x,this.y,this.width,this.height)
+        }
+    }
+
+    var fund = new sprinte(1200,800,0,0,imgFundo)
+    var g1 = new sprinte(70, 70, 330, 80,  imgCinza)
+    var p1 = new sprinte(70, 70, 330, 235, imgCinza)
+    var g2 = new sprinte(70, 70, 330, 475, imgCinza)
+    var p2 = new sprinte(70, 70, 330, 620, imgCinza)
+
+    var g3 = new sprinte(70, 70, 540, 80,  imgCinza)
+    var p3 = new sprinte(70, 70, 540, 235, imgCinza)
+    var g4 = new sprinte(70, 70, 540, 475, imgCinza)
+    var p4 = new sprinte(70, 70, 540, 620, imgCinza)
+
+    var g5 = new sprinte(70, 70, 755, 80,  imgCinza)
+    var p5 = new sprinte(70, 70, 755, 235, imgCinza)
+    var g6 = new sprinte(70, 70, 755, 475, imgCinza)
+    var p6 = new sprinte(70, 70, 755, 620, imgCinza)
+
+    var g7 = new sprinte(70, 70, 970, 80,  imgCinza)
+    var p7 = new sprinte(70, 70, 970, 235, imgCinza)
+    var g8 = new sprinte(70, 70, 970, 475, imgCinza)
+    var p8 = new sprinte(70, 70, 970, 620, imgCinza)
+
+    var g9 = new sprinte(70, 70, 110, 80,  imgCinza)
+    var p9 = new sprinte(70, 70, 110, 235, imgCinza)
+    var g10 = new sprinte(70, 70, 110, 475, imgCinza)
+    var p10 = new sprinte(70, 70, 110, 620, imgCinza)
+
+
+    function upDate() { 
+        fund.upDate();
+        g1.upDate();
+        p1.upDate();
+        g2.upDate();
+        p2.upDate();
+
+        g3.upDate();
+        p3.upDate();
+        g4.upDate();
+        p4.upDate();
+
+        g5.upDate();
+        p5.upDate();
+        g6.upDate();
+        p6.upDate();
+
+        g7.upDate();
+        p7.upDate();
+        g8.upDate();
+        p8.upDate();
+
+        g9.upDate();
+        p9.upDate();
+        g10.upDate();
+        p10.upDate();
+
+        gameArea.clear();
+    }
+
+    window.onload = function () {
+        this.gameArea.Start();
+    }
+
+</script>

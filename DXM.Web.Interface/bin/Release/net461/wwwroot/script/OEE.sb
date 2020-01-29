@@ -1,0 +1,107 @@
+FOR x = 0 to 20
+	buffer[x]=0
+NEXT x
+
+for x=0 to 80
+	percent[x]=0
+	maq_sts[x]=0  
+	timer[x]=0
+	timerS[x]=0
+	zerar[x]=0
+next x
+
+temp_per=0
+Linhas = 2  
+tp = 0
+tempo =2
+emulador =0
+relogio = 0
+
+
+'firmware do mo
+
+FUNCTION inPuts
+	linhas=GETREG(90,199,4)	
+	IF linhas = 0 THEN
+		linhas = 2	
+		WrErr = SETREG(90, 1, 199, 4)		
+	END IF	    
+
+	FOR x = 0 to (linhas)*4				
+		maq_sts[x] = GETREG(1+x,199,4)
+		zerar[x] = GETREG(301+x,199,4)
+	NEXT x
+	
+	FOR x= 0 to linhas-1 then
+		if(maq_sts[x*4]=0 and maq_sts[(x*4)+1]=0 and maq_sts[(x*4)+2]=0 then
+			maq_sts[(x*4)+3]=1
+		else
+			maq_sts[(x*4)+3]=0
+		end if
+	next x
+END FUNCTION
+
+FUNCTION outPuts
+	FOR x=0 to (linhas)*4			
+		WrErr = SETREG(101+x, timer[x], 199, 4)
+		WrErr = SETREG(201+x, percent[x], 199, 4)	
+					
+	NEXT x
+	
+	FOR x= 0 to linhas-1 then
+		WrErr = SETREG(4+(x*4), maq_sts[x*4+3], 199, 4)
+	next x
+	
+	
+	
+END FUNCTION
+
+FUNCTION Disponibilidade
+	FOR x=0 to (linhas)*4		
+		IF maq_sts[x] = 1 Then		
+			timerS[x] = timerS[x]+2	
+			IF timerS[x] > 59 Then
+				timer[x] = timer[x]+1
+				timerS[x] = 0
+			END IF 		
+		END IF	
+	NEXT x	
+	
+	for x = 0 to linhas
+		
+		buffer[x]=timer[x*4]+timer[x*4+1]+timer[x*4+2]+timer[x*4+3]		
+	next x
+	
+	for x=0 to linhas
+		for y = 0 to 3
+			percent[x*4+y]=timer[x*4+y]/buffer[x]*100
+		next y		
+	next x
+	
+END FUNCTION
+
+
+function zerar
+	if
+	for x = 0 to (linhas)*4
+		if zerar[x]=1 then
+			timer[x]=0
+			percent[x]=0
+			WrErr = SETREG(301+x, 0, 199, 4)
+		end if
+	next x
+end function
+
+while(1)
+	TimeStamp = NOW
+	
+		
+	inputs()
+	disponibilidade()	
+	zerar()	
+	outPuts()
+	
+		
+	while (NOW-TimeStamp < 2)	
+	WEND
+Wend

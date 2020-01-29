@@ -1,0 +1,195 @@
+FOR x = 0 to 16
+cont_in[x]=1   
+cont_out[x]=0    
+maq_sts[x]=0  
+oee[x]=0
+per[x]=0  
+q[x]=0    
+dis[x]=0 
+cont_ini[x]=0  
+cont_fim[x]=0  
+vel_atu[x]=0  
+vel_esp[x]=0 
+boffer[x]=0  
+forma[x]=0     
+t_p_prog[x]=0  
+t_par[x]=0     
+t_prod[x]=1 
+t_parS[x]=0    
+t_prodS[x]=0 
+emuContador[x] =0
+NEXT x
+
+Linhas = 2  
+tp = 0
+tempo =2
+emulador =0
+relogio = 0
+
+
+
+
+FUNCTION inPuts
+	linhas=GETREG(50,199,4)	
+	IF linhas = 0 THEN
+		linhas = 1		
+	END IF	
+    emulador = GETREG(49,199,4)	
+
+	FOR x = 0 to linhas-1
+		vel_esp[x] = GETREG(58+(13*x),199,4)
+		IF vel_esp[x] = 0 THEN 
+			vel_esp[x] = 300 
+			WrErr = SETREG(58+(13*x), 300, 199, 4)
+		END IF
+		
+		boffer[x] = GETREG(59+(13*x),199,4)
+		
+		forma[x] = GETREG(60+(13*x),199,4)
+		
+		t_p_prog[x] = GETREG(61+(13*x),199,4)
+		
+		'--------------fim das inputs se sistema
+		
+		cont_in[x] = GETREG(1+(3*x)+0,199,4)
+		cont_out[x] = GETREG(1+(3*x)+1,199,4)
+		maq_sts[x] = GETREG(1+(3*x)+2,199,4)
+		
+	
+	NEXT x
+END FUNCTION
+
+FUNCTION outPuts
+	FOR x=0 to linhas-1
+		WrErr = SETREG(51+(13*x), oee[x], 199, 4)
+		WrErr = SETREG(52+(13*x), per[x], 199, 4)
+		WrErr = SETREG(53+(13*x), q[x], 199, 4)
+		WrErr = SETREG(54+(13*x), dis[x], 199, 4)
+	   
+		WrErr = SETREG(55+(13*x), cont_ini[x], 199, 4) 
+		WrErr = SETREG(56+(13*x), cont_fim[x], 199, 4) 
+		WrErr = SETREG(57+(13*x), vel_atu[x], 199, 4)  
+		
+		WrErr = SETREG(62+(13*x), t_par[x], 199, 4)  
+		WrErr = SETREG(63+(13*x), t_prod[x], 199, 4)
+	NEXT x
+END FUNCTION
+
+FUNCTION Disponibilidade
+	FOR x=0 to linhas-1
+		IF maq_sts[x] = 1 Then		
+			t_parS[x] = t_parS[x]+2	
+			IF t_parS[x] > 59 Then
+				t_par[x] = t_par[x]+1
+				t_parS[x] = 0
+			END IF 
+		Else
+			t_prodS[x] = t_prodS[x]+2	
+			IF t_prodS[x] > 59 Then
+				t_prod[x] = t_prod[x]+1
+				t_prodS[x] = 0
+			END IF 
+		END IF
+		dis[x]=t_prod[x]/(t_par[x]+t_prod[x])*100
+	NEXT x	
+END FUNCTION
+
+FUNCTION performace
+
+	FOR x= 0 to linhas-1
+		IF tempo=2 THEN
+			cont_ini[x] = cont_in[x]
+		END IF
+		IF tempo>=62 THEN			
+			cont_fim[x] = cont_in[x]			
+			tp=cont_fim[x]-cont_ini[x]
+			if tp > 0 THEN
+				vel_atu[x]=tp
+			END IF			
+		END IF	
+			per[x] = vel_atu[x]/vel_esp[x]*100		
+	NEXT x	
+	
+	IF tempo>=62 THEN			
+		tempo=0		
+	END IF	
+	
+	tempo=tempo+2
+END FUNCTION
+
+FUNCTION qualidade
+	FOR x=0 to linhas-1
+		IF forma[x] = 0 THEN
+			q[x]=cont_in[x]/(cont_in[x]+cont_out[x])*100
+		END IF
+		IF forma[x] = 1 THEN
+			q[x]=cont_in[x]/(cont_in[x]+(cont_in[x]-cont_out[x]))*100
+		END IF	
+	NEXT x
+END FUNCTION
+
+FUNCTION oeeCalc
+	FOR x= 0 to linhas-1
+		oee[x] = (dis[x]/100)*(per[x]/100)*(q[x]/100)*100
+	NEXT x
+END FUNCTION
+
+FUNCTION emular
+FOR x = 0 to linhas-1
+	if x=0 then
+	else
+		erro = SETREG(1+x*3,emuContador,199,4)
+	end if
+	
+	
+	 if maq_sts[x] = 0 THEN 
+		emuContador[x]=emuContador[x]+x+1
+	END IF
+NEXT x
+END FUNCTION
+
+function zerar
+	for x = 0 to linhas-1
+	if boffer[x] <> 0 then
+		cont_in[x]=1   
+		cont_out[x]=0    
+		maq_sts[x]=0  
+		oee[x]=0
+		per[x]=0  
+		q[x]=0    
+		dis[x]=0 
+		cont_ini[x]=0  
+		cont_fim[x]=0  
+		vel_atu[x]=0  
+		vel_esp[x]=0 
+		boffer[x]=0  
+		forma[x]=0     
+		t_p_prog[x]=0  
+		t_par[x]=0     
+		t_prod[x]=1 
+		t_parS[x]=0    
+		t_prodS[x]=0 
+		emuContador[x] =0		
+	end if
+	next x
+end function
+
+while(1)
+	TimeStamp = NOW
+	
+	if emulador = 1 Then
+		emular()
+	END IF
+	
+	inputs()
+	disponibilidade()	
+	performace()
+	qualidade()
+	oeeCalc()	
+	zerar()	
+	outPuts()
+	
+		
+	while (NOW-TimeStamp < 2)	
+	WEND
+Wend

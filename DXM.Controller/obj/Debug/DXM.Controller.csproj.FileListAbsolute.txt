@@ -1,0 +1,32 @@
+C:\DXM100 estudos\DXM.Web.Interface\DXM.Controller\bin\Debug\DXM.Controller.exe.config
+C:\DXM100 estudos\DXM.Web.Interface\DXM.Controller\bin\Debug\DXM.Controller.exe
+C:\DXM100 estudos\DXM.Web.Interface\DXM.Controller\bin\Debug\DXM.Controller.pdb
+C:\DXM100 estudos\DXM.Web.Interface\DXM.Controller\bin\Debug\DXM.Store.dll
+C:\DXM100 estudos\DXM.Web.Interface\DXM.Controller\bin\Debug\DXM.OEE.dll
+C:\DXM100 estudos\DXM.Web.Interface\DXM.Controller\bin\Debug\Newtonsoft.Json.dll
+C:\DXM100 estudos\DXM.Web.Interface\DXM.Controller\bin\Debug\DXM.Store.pdb
+C:\DXM100 estudos\DXM.Web.Interface\DXM.Controller\bin\Debug\DXM.OEE.pdb
+C:\DXM100 estudos\DXM.Web.Interface\DXM.Controller\obj\Debug\DXM.Controller.csprojAssemblyReference.cache
+C:\DXM100 estudos\DXM.Web.Interface\DXM.Controller\obj\Debug\DXM.Controller.Form1.resources
+C:\DXM100 estudos\DXM.Web.Interface\DXM.Controller\obj\Debug\DXM.Controller.Properties.Resources.resources
+C:\DXM100 estudos\DXM.Web.Interface\DXM.Controller\obj\Debug\DXM.Controller.csproj.GenerateResource.cache
+C:\DXM100 estudos\DXM.Web.Interface\DXM.Controller\obj\Debug\DXM.Controller.csproj.CoreCompileInputs.cache
+C:\DXM100 estudos\DXM.Web.Interface\DXM.Controller\obj\Debug\DXM.Controller.csproj.CopyComplete
+C:\DXM100 estudos\DXM.Web.Interface\DXM.Controller\obj\Debug\DXM.Controller.exe
+C:\DXM100 estudos\DXM.Web.Interface\DXM.Controller\obj\Debug\DXM.Controller.pdb
+C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Controller\bin\Debug\DXM.Controller.exe.config
+C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Controller\bin\Debug\DXM.Controller.exe
+C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Controller\bin\Debug\DXM.Controller.pdb
+C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Controller\bin\Debug\DXM.Store.dll
+C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Controller\bin\Debug\DXM.OEE.dll
+C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Controller\bin\Debug\Newtonsoft.Json.dll
+C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Controller\bin\Debug\DXM.Store.pdb
+C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Controller\bin\Debug\DXM.OEE.pdb
+C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Controller\obj\Debug\DXM.Controller.csprojAssemblyReference.cache
+C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Controller\obj\Debug\DXM.Controller.Form1.resources
+C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Controller\obj\Debug\DXM.Controller.Properties.Resources.resources
+C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Controller\obj\Debug\DXM.Controller.csproj.GenerateResource.cache
+C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Controller\obj\Debug\DXM.Controller.csproj.CoreCompileInputs.cache
+C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Controller\obj\Debug\DXM.Controller.csproj.CopyComplete
+C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Controller\obj\Debug\DXM.Controller.exe
+C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Controller\obj\Debug\DXM.Controller.pdb
