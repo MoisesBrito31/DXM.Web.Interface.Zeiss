@@ -130,4 +130,40 @@
         this.gameArea.Start();
     }
 
+    setInterval(function () {
+        getlinhas();
+    }, 2000)
+
+    function getlinhas() {
+        var xhp = new XMLHttpRequest()
+        xhp.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                var re = this.responseText
+                if (re == "falha") {
+                    document.location.href = "/oee/offline";
+                }
+                data = JSON.parse(re);                
+                if (data[0].estado =="DXM OffLine") {
+                    document.location.href = "/oee/offline";
+                }
+                else {
+                    if (data[0].rodando_sts) { g1.image=imgVerde}
+                    if (data[0].parado_sts) { g1.image=imgCinza}
+                    if (data[0].falha_sts) { g1.image=imgVermelho}
+                    if (data[0].espera_sts) { g1.image = imgLaranja }
+
+                    if (data[1].rodando_sts) { p1.image=imgVerde}
+                    if (data[1].parado_sts) { p1.image=imgCinza}
+                    if (data[1].falha_sts) { p1.image=imgVermelho}
+                    if (data[1].espera_sts) { p1.image=imgLaranja}
+                    
+                }
+
+            }
+        }
+        xhp.open("Get", "/oee/conjunto_linhas_zeiss");
+        xhp.send();
+    }
+
+
 </script>
