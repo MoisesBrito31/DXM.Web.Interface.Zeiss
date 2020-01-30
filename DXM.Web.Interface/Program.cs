@@ -84,7 +84,7 @@ namespace DXM.Web.Interface
             bool falha = false;
             int tempoM = 0;
             int turno1 = 6 * 60 + 0;
-            int turno2 = 19 * 60 + 0;
+            int turno2 = 18 * 60 + 0;
             //int turno3 = 22 * 60 + 0;
             zerar = false;
             
