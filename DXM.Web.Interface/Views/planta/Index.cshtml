@@ -9,11 +9,12 @@
     canvas {
         border: 1px solid #d3d3d3;
         background-color: #f1f1f1;
-        margin:auto;
-        text-align:center;
+        margin: auto;
+        text-align: center;
     }
 </style>
 
+<!--
 <div class="card-title mt-5 mb-5">
     <div class="row">
         <div class="col text-left">
@@ -21,6 +22,7 @@
         </div>
     </div>
 </div>
+    -->
 
 
 
@@ -35,26 +37,27 @@
     var imgLaranja = new Image();
     var imgVerde = new Image();
     var imgCinza = new Image();
+    var data;
 
     imgFundo.src = "/images/fundo.jpg";
     imgVermelho.src = "/images/vermelho.png";
     imgLaranja.src = "/images/laranja.png";
-    imgVerde.src = "/images/verde.png"; 
-    imgCinza.src = "/images/cinza.png";     
-    
+    imgVerde.src = "/images/verde.png";
+    imgCinza.src = "/images/cinza.png";
+
 
     var gameArea = {
         canvas: document.getElementById("view"),
-        ctx: document.getElementById("view").getContext("2d"),      
+        ctx: document.getElementById("view").getContext("2d"),
         Start: function () {
             this.canvas.width = 1200;
             this.canvas.height = 800;
-            this.context = this.ctx;  
-            this.interval = setInterval(upDate,20)
+            this.context = this.ctx;
+            this.interval = setInterval(upDate, 20)
         },
 
         clear: function () {
-            this.ctx.clearRect(0,0,this.width,this.height)
+            this.ctx.clearRect(0, 0, this.width, this.height)
         }
     }
 
@@ -65,38 +68,38 @@
         this.y = y;
         this.image = image;
         this.upDate = function () {
-            gameArea.ctx.drawImage(this.image,this.x,this.y,this.width,this.height)
+            gameArea.ctx.drawImage(this.image, this.x, this.y, this.width, this.height)
         }
     }
 
-    var fund = new sprinte(1200,800,0,0,imgFundo)
-    var g1 = new sprinte(70, 70, 330, 80,  imgCinza)
+    var fund = new sprinte(1200, 800, 0, 0, imgFundo)
+    var g1 = new sprinte(70, 70, 330, 80, imgCinza)
     var p1 = new sprinte(70, 70, 330, 235, imgCinza)
     var g2 = new sprinte(70, 70, 330, 475, imgCinza)
     var p2 = new sprinte(70, 70, 330, 620, imgCinza)
 
-    var g3 = new sprinte(70, 70, 540, 80,  imgCinza)
+    var g3 = new sprinte(70, 70, 540, 80, imgCinza)
     var p3 = new sprinte(70, 70, 540, 235, imgCinza)
     var g4 = new sprinte(70, 70, 540, 475, imgCinza)
     var p4 = new sprinte(70, 70, 540, 620, imgCinza)
 
-    var g5 = new sprinte(70, 70, 755, 80,  imgCinza)
+    var g5 = new sprinte(70, 70, 755, 80, imgCinza)
     var p5 = new sprinte(70, 70, 755, 235, imgCinza)
     var g6 = new sprinte(70, 70, 755, 475, imgCinza)
     var p6 = new sprinte(70, 70, 755, 620, imgCinza)
 
-    var g7 = new sprinte(70, 70, 970, 80,  imgCinza)
+    var g7 = new sprinte(70, 70, 970, 80, imgCinza)
     var p7 = new sprinte(70, 70, 970, 235, imgCinza)
     var g8 = new sprinte(70, 70, 970, 475, imgCinza)
     var p8 = new sprinte(70, 70, 970, 620, imgCinza)
 
-    var g9 = new sprinte(70, 70, 110, 80,  imgCinza)
+    var g9 = new sprinte(70, 70, 110, 80, imgCinza)
     var p9 = new sprinte(70, 70, 110, 235, imgCinza)
     var g10 = new sprinte(70, 70, 110, 475, imgCinza)
     var p10 = new sprinte(70, 70, 110, 620, imgCinza)
 
 
-    function upDate() { 
+    function upDate() {
         fund.upDate();
         g1.upDate();
         p1.upDate();
@@ -142,21 +145,12 @@
                 if (re == "falha") {
                     document.location.href = "/oee/offline";
                 }
-                data = JSON.parse(re);                
-                if (data[0].estado =="DXM OffLine") {
+                data = JSON.parse(re);
+                if (data[0].estado == "DXM OffLine") {
                     document.location.href = "/oee/offline";
                 }
                 else {
-                    if (data[0].rodando_sts) { g1.image=imgVerde}
-                    if (data[0].parado_sts) { g1.image=imgCinza}
-                    if (data[0].falha_sts) { g1.image=imgVermelho}
-                    if (data[0].espera_sts) { g1.image = imgLaranja }
 
-                    if (data[1].rodando_sts) { p1.image=imgVerde}
-                    if (data[1].parado_sts) { p1.image=imgCinza}
-                    if (data[1].falha_sts) { p1.image=imgVermelho}
-                    if (data[1].espera_sts) { p1.image=imgLaranja}
-                    
                 }
 
             }
@@ -165,5 +159,267 @@
         xhp.send();
     }
 
+    setInterval(function () {
+        if (data[0].rodando_sts) { g1.image = imgVerde }
+        else if (data[0].parado_sts) { g1.image = imgCinza }
+        else if (data[0].falha_sts) {
+            if (g1.image == imgVermelho) {
+                g1.image = imgCinza
+            }
+            else {
+                g1.image = imgVermelho
+            }
+        }
+        else if (data[0].espera_sts) { g1.image = imgLaranja }
+        else { g1.image = imgCinza }
+
+        if (data[1].rodando_sts) { p1.image = imgVerde }
+        else if (data[1].parado_sts) { p1.image = imgCinza }
+        else if (data[1].falha_sts) {
+            if (p1.image == imgVermelho) {
+                p1.image = imgCinza
+            }
+            else {
+                p1.image = imgVermelho
+            }
+        }
+        else if (data[1].espera_sts) { p1.image = imgLaranja }
+        else { p1.image = imgCinza }
+
+        if (data[2].rodando_sts) { g2.image = imgVerde }
+        else if (data[2].parado_sts) { g2.image = imgCinza }
+        else if (data[2].falha_sts) {
+            if (g2.image == imgVermelho) {
+                g2.image = imgCinza
+            }
+            else {
+                g2.image = imgVermelho
+            }
+        }
+        else if (data[2].espera_sts) { g2.image = imgLaranja }
+        else { g2.image = imgCinza }
+
+        if (data[3].rodando_sts) { p2.image = imgVerde }
+        else if (data[3].parado_sts) { p2.image = imgCinza }
+        else if (data[3].falha_sts) {
+            if (p2.image == imgVermelho) {
+                p2.image = imgCinza
+            }
+            else {
+                p2.image = imgVermelho
+            }
+        }
+        else if (data[3].espera_sts) { p2.image = imgLaranja }
+        else { p2.image = imgCinza }
+
+        if (data[4].rodando_sts) { g3.image = imgVerde }
+        else if (data[4].parado_sts) { g3.image = imgCinza }
+        else if (data[4].falha_sts) {
+            if (g3.image == imgVermelho) {
+                g3.image = imgCinza
+            }
+            else {
+                g3.image = imgVermelho
+            }
+        }
+        else if (data[4].espera_sts) { g3.image = imgLaranja }
+        else { g3.image = imgCinza }
+
+        if (data[5].rodando_sts) { p3.image = imgVerde }
+        else if (data[5].parado_sts) { p3.image = imgCinza }
+        else if (data[5].falha_sts) {
+            if (p3.image == imgVermelho) {
+                p3.image = imgCinza
+            }
+            else {
+                p3.image = imgVermelho
+            }
+        }
+        else if (data[5].espera_sts) { p3.image = imgLaranja }
+        else { p3.image = imgCinza }
+
+        if (data[6].rodando_sts) { g4.image = imgVerde }
+        else if (data[6].parado_sts) { g4.image = imgCinza }
+        else if (data[6].falha_sts) {
+            if (g4.image == imgVermelho) {
+                g4.image = imgCinza
+            }
+            else {
+                g4.image = imgVermelho
+            }
+        }
+        else if (data[6].espera_sts) { g4.image = imgLaranja }
+        else { g4.image = imgCinza }
+
+        if (data[7].rodando_sts) { p4.image = imgVerde }
+        else if (data[7].parado_sts) { p4.image = imgCinza }
+        else if (data[7].falha_sts) {
+            if (p4.image == imgVermelho) {
+                p4.image = imgCinza
+            }
+            else {
+                p4.image = imgVermelho
+            }
+        }
+        else if (data[7].espera_sts) { p4.image = imgLaranja }
+        else { p4.image = imgCinza }
+
+        if (data[8].rodando_sts) { g5.image = imgVerde }
+        else if (data[8].parado_sts) { g5.image = imgCinza }
+        else if (data[8].falha_sts) {
+            if (g5.image == imgVermelho) {
+                g5.image = imgCinza
+            }
+            else {
+                g5.image = imgVermelho
+            }
+        }
+        else if (data[8].espera_sts) { g5.image = imgLaranja }
+        else { g5.image = imgCinza }
+
+        if (data[9].rodando_sts) { p5.image = imgVerde }
+        else if (data[9].parado_sts) { p5.image = imgCinza }
+        else if (data[9].falha_sts) {
+            if (p5.image == imgVermelho) {
+                p5.image = imgCinza
+            }
+            else {
+                p5.image = imgVermelho
+            }
+        }
+        else if (data[9].espera_sts) { p5.image = imgLaranja }
+        else { p5.image = imgCinza }
+
+        if (data[10].rodando_sts) { g6.image = imgVerde }
+        else if (data[10].parado_sts) { g6.image = imgCinza }
+        else if (data[10].falha_sts) {
+            if (g6.image == imgVermelho) {
+                g6.image = imgCinza
+            }
+            else {
+                g6.image = imgVermelho
+            }
+        }
+        else if (data[10].espera_sts) { g6.image = imgLaranja }
+        else { g6.image = imgCinza }
+
+        if (data[11].rodando_sts) { p6.image = imgVerde }
+        else if (data[11].parado_sts) { p6.image = imgCinza }
+        else if (data[11].falha_sts) {
+            if (p6.image == imgVermelho) {
+                p6.image = imgCinza
+            }
+            else {
+                p6.image = imgVermelho
+            }
+        }
+        else if (data[11].espera_sts) { p6.image = imgLaranja }
+        else { p6.image = imgCinza }
+
+        if (data[12].rodando_sts) { g7.image = imgVerde }
+        else if (data[12].parado_sts) { g7.image = imgCinza }
+        else if (data[12].falha_sts) {
+            if (g7.image == imgVermelho) {
+                g7.image = imgCinza
+            }
+            else {
+                g7.image = imgVermelho
+            }
+        }
+        else if (data[12].espera_sts) { g7.image = imgLaranja }
+        else { g7.image = imgCinza }
+
+        if (data[13].rodando_sts) { p7.image = imgVerde }
+        else if (data[13].parado_sts) { p7.image = imgCinza }
+        else if (data[13].falha_sts) {
+            if (p7.image == imgVermelho) {
+                p7.image = imgCinza
+            }
+            else {
+                p7.image = imgVermelho
+            }
+        }
+        else if (data[13].espera_sts) { p7.image = imgLaranja }
+        else { p7.image = imgCinza }
+
+        if (data[14].rodando_sts) { g8.image = imgVerde }
+        else if (data[14].parado_sts) { g8.image = imgCinza }
+        else if (data[14].falha_sts) {
+            if (g8.image == imgVermelho) {
+                g8.image = imgCinza
+            }
+            else {
+                g8.image = imgVermelho
+            }
+        }
+        else if (data[14].espera_sts) { g8.image = imgLaranja }
+        else { g8.image = imgCinza }
+
+        if (data[15].rodando_sts) { p8.image = imgVerde }
+        else if (data[15].parado_sts) { p8.image = imgCinza }
+        else if (data[15].falha_sts) {
+            if (p8.image == imgVermelho) {
+                p8.image = imgCinza
+            }
+            else {
+                p8.image = imgVermelho
+            }
+        }
+        else if (data[15].espera_sts) { p8.image = imgLaranja }
+        else { p8.image = imgCinza }
+
+        if (data[16].rodando_sts) { g9.image = imgVerde }
+        else if (data[16].parado_sts) { g9.image = imgCinza }
+        else if (data[16].falha_sts) {
+            if (g9.image == imgVermelho) {
+                g9.image = imgCinza
+            }
+            else {
+                g9.image = imgVermelho
+            }
+        }
+        else if (data[16].espera_sts) { g9.image = imgLaranja }
+        else { g9.image = imgCinza }
+
+        if (data[17].rodando_sts) { p9.image = imgVerde }
+        else if (data[17].parado_sts) { p9.image = imgCinza }
+        else if (data[17].falha_sts) {
+            if (p9.image == imgVermelho) {
+                p9.image = imgCinza
+            }
+            else {
+                p9.image = imgVermelho
+            }
+        }
+        else if (data[17].espera_sts) { p9.image = imgLaranja }
+        else { p9.image = imgCinza }
+
+        if (data[18].rodando_sts) { g10.image = imgVerde }
+        else if (data[18].parado_sts) { g10.image = imgCinza }
+        else if (data[18].falha_sts) {
+            if (g10.image == imgVermelho) {
+                g10.image = imgCinza
+            }
+            else {
+                g10.image = imgVermelho
+            }
+        }
+        else if (data[18].espera_sts) { g10.image = imgLaranja }
+        else { g10.image = imgCinza }
+
+        if (data[19].rodando_sts) { p10.image = imgVerde }
+        else if (data[19].parado_sts) { p10.image = imgCinza }
+        else if (data[19].falha_sts) {
+            if (p10.image == imgVermelho) {
+                p10.image = imgCinza
+            }
+            else {
+                p10.image = imgVermelho
+            }
+        }
+        else if (data[19].espera_sts) { p10.image = imgLaranja }
+        else { p10.image = imgCinza }
+
+    }, 300, false);
 
 </script>

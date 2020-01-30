@@ -1,31 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Web.Interface\\DXM.Web.Interface.csproj": {}
+    "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Web.Interface\\DXM.Web.Interface.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj": {
+    "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj",
+        "projectUniqueName": "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj",
         "projectName": "DXM.OEE",
-        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj"
+        "projectPath": "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj"
       },
       "frameworks": {
         "net461": {}
       }
     },
-    "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Store\\DXM.Store.csproj": {
+    "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Store\\DXM.Store.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Store\\DXM.Store.csproj",
+        "projectUniqueName": "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Store\\DXM.Store.csproj",
         "projectName": "DXM.Store",
-        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Store\\DXM.Store.csproj",
+        "projectPath": "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Store\\DXM.Store.csproj",
         "frameworks": {
           "net461": {
             "projectReferences": {
-              "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj": {
-                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj"
+              "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj": {
+                "projectPath": "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj"
               }
             }
           }
@@ -35,17 +35,17 @@
         "net461": {}
       }
     },
-    "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Web.Interface\\DXM.Web.Interface.csproj": {
+    "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Web.Interface\\DXM.Web.Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Web.Interface\\DXM.Web.Interface.csproj",
+        "projectUniqueName": "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Web.Interface\\DXM.Web.Interface.csproj",
         "projectName": "DXM.Web.Interface",
-        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Web.Interface\\DXM.Web.Interface.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Web.Interface\\obj\\",
+        "projectPath": "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Web.Interface\\DXM.Web.Interface.csproj",
+        "packagesPath": "C:\\Users\\Moises Brito\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Web.Interface\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Moises Brito\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,11 +58,11 @@
         "frameworks": {
           "net461": {
             "projectReferences": {
-              "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj": {
-                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj"
+              "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj": {
+                "projectPath": "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.OEE\\DXM.OEE.csproj"
               },
-              "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Store\\DXM.Store.csproj": {
-                "projectPath": "C:\\Users\\User\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Store\\DXM.Store.csproj"
+              "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Store\\DXM.Store.csproj": {
+                "projectPath": "C:\\Users\\Moises Brito\\Documents\\GitHub\\DXM.Web.Interface.Zeiss\\DXM.Store\\DXM.Store.csproj"
               }
             }
           }
