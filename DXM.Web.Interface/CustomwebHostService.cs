@@ -27,15 +27,14 @@ namespace DXM.Web.Interface
 
             ThreadStart start = new ThreadStart(Program.leituraDXM);
             Thread acao = new Thread(start);
-            acao.Start();
-
             ThreadStart log = new ThreadStart(Program.DXMLog);
             Thread acao2 = new Thread(log);
-            acao2.Start();
-
             ThreadStart log2 = new ThreadStart(Program.poolRegistro);
             Thread acao3 = new Thread(log2);
+
             acao3.Start();
+            acao.Start();
+            acao2.Start();
         }
 
         protected override void OnStarted()

@@ -48,17 +48,16 @@ namespace DXM.Web.Interface
 
              ThreadStart start = new ThreadStart(leituraDXM);
              Thread acao = new Thread(start);
-             acao.Start();
-
              ThreadStart log = new ThreadStart(DXMLog);
              Thread acao2 = new Thread(log);
-             acao2.Start();
-
              ThreadStart log2 = new ThreadStart(poolRegistro);
              Thread acao3 = new Thread(log2);
-             acao3.Start();
 
-             //*/
+             acao3.Start();
+             acao.Start();
+             acao2.Start();
+
+            //*/
 
             var pathToExec = Process.GetCurrentProcess().MainModule.FileName;
             _pathContentRoot = Path.GetDirectoryName(pathToExec);
@@ -267,7 +266,12 @@ namespace DXM.Web.Interface
 
                 user = (string)Registry.GetValue("HKEY_CURRENT_USER\\DXM_Web", "usuario", "indefinido");
 
-                if (d_ini.Date > DateTime.Now.Date)
+                if (inf)
+                {
+                    registrado = true;
+                    regTipo = "Permanente";
+                }
+                else if (d_ini.Date > DateTime.Now.Date)
                 {
                     registrado = false;
                     regTipo = "Não Registrado";
@@ -282,12 +286,7 @@ namespace DXM.Web.Interface
                     Registry.SetValue("HKEY_CURRENT_USER\\DXM_Web", sdataAtual, "falha");
                     Registry.SetValue("HKEY_CURRENT_USER\\DXM_Web", sdataLim, "falha");
                     Registry.SetValue("HKEY_CURRENT_USER\\DXM_Web", sInf, "falha");
-                }
-                else if (inf)
-                {
-                    registrado = true;
-                    regTipo = "Permanente";
-                }
+                }                
                 else
                 {
                     Registry.SetValue("HKEY_CURRENT_USER\\DXM_Web", sdataAtual, atual);

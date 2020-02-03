@@ -47,3 +47,12 @@ C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Store\obj\Debug\DXM.Store.csproj
 C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Store\obj\Debug\DXM.Store.csproj.CopyComplete
 C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Store\obj\Debug\DXM.Store.dll
 C:\DXM100 estudos\DXM.Web.Interface - zyess\DXM.Store\obj\Debug\DXM.Store.pdb
+C:\Users\User\Documents\GitHub\DXM.Web.Interface.Zeiss\DXM.Store\bin\Debug\DXM.Store.dll
+C:\Users\User\Documents\GitHub\DXM.Web.Interface.Zeiss\DXM.Store\bin\Debug\DXM.Store.pdb
+C:\Users\User\Documents\GitHub\DXM.Web.Interface.Zeiss\DXM.Store\bin\Debug\DXM.OEE.dll
+C:\Users\User\Documents\GitHub\DXM.Web.Interface.Zeiss\DXM.Store\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Documents\GitHub\DXM.Web.Interface.Zeiss\DXM.Store\bin\Debug\DXM.OEE.pdb
+C:\Users\User\Documents\GitHub\DXM.Web.Interface.Zeiss\DXM.Store\obj\Debug\DXM.Store.csprojAssemblyReference.cache
+C:\Users\User\Documents\GitHub\DXM.Web.Interface.Zeiss\DXM.Store\obj\Debug\DXM.Store.csproj.CopyComplete
+C:\Users\User\Documents\GitHub\DXM.Web.Interface.Zeiss\DXM.Store\obj\Debug\DXM.Store.dll
+C:\Users\User\Documents\GitHub\DXM.Web.Interface.Zeiss\DXM.Store\obj\Debug\DXM.Store.pdb
